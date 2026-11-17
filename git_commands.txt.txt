@@ -1,0 +1,214 @@
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~
+$
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~
+$
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~
+$ rm -rf git_demo
+mkdir git_demo
+cd git_demo
+
+git init
+
+git config user.name "Alap Vezeto"
+git config user.email "alap@example.com"
+
+echo "Elso verzio" > file.txt
+
+git add file.txt
+git commit -m "Első commit"
+
+git branch Acsapat
+git branch Bcsapat
+
+git checkout Acsapat
+
+git config user.name "Avezeto"
+git config user.email "user1@example.com"
+
+echo "Acsapat változás" >> file.txt
+
+git add file.txt
+git commit -m "Avezeto commit"
+
+git checkout Bcsapat
+
+git config user.name "Bvezeto"
+git config user.email "user2@example.com"
+
+echo "Bcsapat változás" >> file.txt
+
+git add file.txt
+git commit -m "Bvezeto commit"
+Initialized empty Git repository in C:/Users/SchweitzerÁdámDávid/git_demo/.git/
+
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[master (root-commit) 8a36dff] Első commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+Switched to branch 'Acsapat'
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[Acsapat 5115e73] Avezeto commit
+ 1 file changed, 1 insertion(+)
+Switched to branch 'Bcsapat'
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[Bcsapat 67a0761] Bvezeto commit
+ 1 file changed, 1 insertion(+)
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (Bcsapat)
+$
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (Bcsapat)
+$ git branch -M main
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git branch -M Bcsapat
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (Bcsapat)
+$ git branch -M main
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ https://github.com/Sch-adam55/git_demo.git
+bash: https://github.com/Sch-adam55/git_demo.git: No such file or directory
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ https://github.com/Sch-adam55/git_demo.git
+bash: https://github.com/Sch-adam55/git_demo.git: No such file or directory
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ pwd
+/c/Users/SchweitzerÁdámDávid/git_demo
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ ls -la
+total 13
+drwxr-xr-x 1 AzureAD+SchweitzerÁdámDávid 4096  0 Nov 17 08:43 ./
+drwxr-xr-x 1 AzureAD+SchweitzerÁdámDávid 4096  0 Nov 17 08:43 ../
+drwxr-xr-x 1 AzureAD+SchweitzerÁdámDávid 4096  0 Nov 17 08:47 .git/
+-rw-r--r-- 1 AzureAD+SchweitzerÁdámDávid 4096 32 Nov 17 08:43 file.txt
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git remote add origin https://github.com/Sch-adam55/git_demo.git
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 463 bytes | 231.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Sch-adam55/git_demo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git push origin Acsapat
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 267 bytes | 267.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'Acsapat' on GitHub by visiting:
+remote:      https://github.com/Sch-adam55/git_demo/pull/new/Acsapat
+remote:
+To https://github.com/Sch-adam55/git_demo.git
+ * [new branch]      Acsapat -> Acsapat
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git push origin Bcsapat
+error: src refspec Bcsapat does not match any
+error: failed to push some refs to 'https://github.com/Sch-adam55/git_demo.git'
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git push origin Bcsapat
+error: src refspec Bcsapat does not match any
+error: failed to push some refs to 'https://github.com/Sch-adam55/git_demo.git'
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git branch -M Bcsapat
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (Bcsapat)
+$ git push origin Bcsapat
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'Bcsapat' on GitHub by visiting:
+remote:      https://github.com/Sch-adam55/git_demo/pull/new/Bcsapat
+remote:
+To https://github.com/Sch-adam55/git_demo.git
+ * [new branch]      Bcsapat -> Bcsapat
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (Bcsapat)
+$ git branch -M main
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git add git_commands.txt
+fatal: pathspec 'git_commands.txt' did not match any files
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git commit -m "Git parancsok hozzáadása"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git push
+Everything up-to-date
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git push origin Bcsapat
+error: src refspec Bcsapat does not match any
+error: failed to push some refs to 'https://github.com/Sch-adam55/git_demo.git'
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ ls -la
+total 13
+drwxr-xr-x 1 AzureAD+SchweitzerÁdámDávid 4096  0 Nov 17 08:43 ./
+drwxr-xr-x 1 AzureAD+SchweitzerÁdámDávid 4096  0 Nov 17 08:43 ../
+drwxr-xr-x 1 AzureAD+SchweitzerÁdámDávid 4096  0 Nov 17 09:04 .git/
+-rw-r--r-- 1 AzureAD+SchweitzerÁdámDávid 4096 32 Nov 17 08:43 file.txt
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ mkdir git_commands.txt
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git add git_commands.txt
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git commit -m "Git parancsok hozzáadása"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$ git push
+Everything up-to-date
+
+AzureAD+SchweitzerÁdámDávid@CZC7117N58 MINGW64 ~/git_demo (main)
+$
